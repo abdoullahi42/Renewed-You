@@ -8,10 +8,13 @@ import Contact from "./pages/Contact";
 import Teens from "./pages/Teens";
 import Couples from "./pages/couples";
 import Individual from "./pages/individual";
+import NavBar from "./component/navBar";
+import Footer from "./component/Footer";
 
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route index element={<Homes />} />
         <Route path="/about" element={<AboutUs />} />
@@ -25,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

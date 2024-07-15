@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import NavBar from "../component/navBar";
 
 const imagesData = [
   { id: 1, url: "src/assets/image1.jpg", alt: "theraphist" },
@@ -22,7 +21,6 @@ const imagesData = [
 function AboutUs() {
   return (
     <>
-      <NavBar />
       <section className="my-14">
         <div className="text-center mb-5 lg:mb-7">
           <h2 className="text-4xl  mb-3  lg:mb-12 ">About us</h2>
@@ -62,7 +60,7 @@ function AboutUs() {
             <h2 className="text-2xl font-semibold mb-3 lg:mb-9 px-2 lg:text-4xl text-center w-[70%] mx-auto ">
               Ready to take the first step towards a happier and healthier you?
             </h2>
-            <button className="text-xl  lg:text-2xl py-3 px-6 bg-[#0D4A07] text-[#fff] rounded-[100px]">
+            <button className="text-xl  lg:text-2xl py-3 px-6 bg-[#0D4A07] text-[#fff] rounded-[30px]">
               Get started
             </button>
           </div>
