@@ -13,8 +13,8 @@ function Homes() {
       <Stats />
       <SteptoStart />
       <TherapyComparison />
-      <Faqs />
       <Reviews />
+      <Faqs />
     </>
   );
 }
