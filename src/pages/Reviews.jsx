@@ -1,49 +1,48 @@
+/* eslint-disable react/no-unescaped-entities */
 import hijabwoman from "../assets/hijabiWoman.jpg";
 import couples from "../assets/happycouples.png";
-import teenager from "../assets/teenageThera.jpg";
-
+import couple from "../assets/coupless.jpg";
+import man from "../assets/justin.jpg";
+import boy from "../assets/amad.jpg";
+import womans from "../assets/ally.jpg";
 const cardData = [
   {
     id: 1,
-    image: hijabwoman,
-    title: "Card 1",
-    quote:
-      "This is a quote for card 1.This is a quote for card 1.This is a quote for card 1.This is a quote for card 1.This is a quote for card 1.This is a quote for card 1.This is a quote for card 1.",
+    image: man,
+    title: "David",
+    quote: `"I was hesitant about therapy, but Renewed-You made the process approachable and supportive. My therapist listened without judgment and helped me uncover solutions I hadn't considered. I'm so glad I took the leap"`,
   },
   {
     id: 2,
-    image: couples,
-    title: "Card 2",
-    quote:
-      "This is a quote for card 2.This is a quote for card 2This is a quote for card 2This is a quote for card 2 This is a quote for card 2",
+    image: womans,
+    title: "sofia",
+    quote: `"Therapy at Renewed-You wasn't just helpful, it was transformative. My therapist provided a safe space to explore my anxieties and develop coping mechanisms. I feel empowered and ready to tackle life's challenges."`,
   },
   {
     id: 3,
-    image: teenager,
-    title: "Card 3",
+    image: couples,
+    title: "Emily and John",
     quote:
-      "This is a quote for card 3. This is a quote for card 3.This is a quote for card 3.This is a quote for card 3.This is a quote for card 3.",
+      '"Renewed-You therapy saved our relationship. We found a renewed sense of love and understanding in our relationship. Now, we feel closer and more connected than ever"',
   },
   {
     id: 4,
-    image: "https://via.placeholder.com/150",
-    title: "Card 4",
+    image: hijabwoman,
+    title: "Fatima",
     quote:
-      "This is a quote for card 4.This is a quote for card 4This is a quote for card 4This is a quote for card 4This is a quote for card 4This is a quote for card 4",
+      '"Struggling with burnout was taking a toll on my work and personal life. Therapy at Renewed-You helped me identify the root causes and develop strategies for better work-life balance. it helped me rediscover my inner strength and find clarity in my life."',
   },
   {
     id: 5,
-    image: "https://via.placeholder.com/150",
-    title: "Card 5",
-    quote:
-      "This is a quote for card 5.This is a quote for cardThis is a quote for cardThis is a quote for cardThis is a quote for cardThis is a quote for card",
+    image: boy,
+    title: "lamine",
+    quote: `"Talking to a therapist at Renewed-You was a game-changer. Renewed-You gave me the tools to handle school stress and friendships without judgment. I feel confident now to communicate my needs openly."`,
   },
   {
     id: 6,
-    image: "https://via.placeholder.com/150",
-    title: "Card 6",
-    quote:
-      "This is a quote for card 6.This is a quote for card 6.This is a quote for card 6.This is a quote for card 6.This is a quote for card 6.",
+    image: couple,
+    title: "Sarah and Michael",
+    quote: `"Going to therapy at Renewed-You was the best decision we made. We learned how to celebrate each other's strengths and navigate disagreements constructively. It's brought a new level of intimacy to our relationship"`,
   },
 ];
 
@@ -56,12 +55,14 @@ function Reviews() {
       >
         {cardData.map((card) => (
           <div
-            className="bg-[#E9FAE9]  p-4 flex-shrink-0 w-64 mx-2  lg:w-[312px] lg:h-[435px] "
+            className="bg-[#e8f8e8] flex-shrink-0 w-80 justify-center items-center  mx-5 "
             key={card.id}
           >
-            <img src={card.image} alt={card.title} className="w-full h-40  " />
-            <h3 className="mt-4 text-xl font-semibold">{card.title}</h3>
-            <p className="mt-2">{card.quote}</p>
+            <img src={card.image} alt={card.title} />
+            <p className="px-10 pt-10 ">{card.quote}</p>
+            <p className="mt-4 text-xl font-semibold text-center">
+              {card.title}
+            </p>
           </div>
         ))}
       </div>
