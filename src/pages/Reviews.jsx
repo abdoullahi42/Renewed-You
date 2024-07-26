@@ -55,7 +55,7 @@ function Reviews() {
       >
         {cardData.map((card) => (
           <div
-            className="bg-[#e8f8e8] flex-shrink-0 w-80 justify-center items-center  mx-5 "
+            className="bg-[#fff] flex-shrink-0 w-80 justify-center items-center  mx-5 "
             key={card.id}
           >
             <img src={card.image} alt={card.title} />

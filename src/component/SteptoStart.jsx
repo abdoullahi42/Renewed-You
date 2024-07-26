@@ -8,7 +8,7 @@ import {
 
 function SteptoStart() {
   return (
-    <section className="mb-14 lg:mb-16">
+    <section className="mb-14 lg:mb-16 ">
       <div className=" flex flex-col ">
         <div className="mx-auto text-center mb-4 lg:mb-6">
           <h3 className="font-semibold font-abdu text-2xl md:text-3xl lg:text-5xl mb-2">
