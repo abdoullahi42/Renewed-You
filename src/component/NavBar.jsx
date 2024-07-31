@@ -22,7 +22,7 @@ function NavBar() {
         <div
           className={`${
             isopen
-              ? "fixed inset-0 bg-white h-[100vh] flex flex-col w-[100vw]  py-24"
+              ? "fixed inset-0 bg-white h-[100vh] flex flex-col w-[90vw]  py-24 pt-5"
               : "hidden"
           }  lg:flex  gap-8 lg:gap-20 lg:py-2     `}
         >
@@ -44,7 +44,10 @@ function NavBar() {
         </div>
         <div onClick={() => setIsopen(!isopen)} className="">
           {isopen ? (
-            <FaTimes size={30} className="lg:hidden" />
+            <FaTimes
+              size={32}
+              className="lg:hidden absolute top-0 right-[8%]"
+            />
           ) : (
             <FaBars size={30} className="lg:hidden" />
           )}
