@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import hijabwoman from "../assets/hijabiWoman.jpg";
+import hijabwoman from "../assets/HijabiWoman.jpg";
 import couples from "../assets/happycouples.png";
 import couple from "../assets/coupless.jpg";
 import man from "../assets/justin.jpg";
