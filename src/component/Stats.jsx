@@ -9,13 +9,13 @@ const stats = [
 /* eslint-disable react/no-unescaped-entities */
 function Stats() {
   return (
-    <section className=" lg:mb-14 bg-white  pt-8">
-      <h2 className="font-semibold font-abdu text-3xl md:text-3xl lg:text-5xl mb-9 text-center md:mb-11 lg:mb-16  px-2">
+    <section className=" lg:mb-14 bg-white  pt-8 md:pt-14">
+      <h2 className="font-semibold font-abdu text-4xl leading-[1.4]  lg:text-5xl mb-10 text-center  md:mb-0  px-1">
         High-quality care backed by evidence
       </h2>
-      <div className="flex gap-5 flex-col text-center mx-3 mb-8  min-[960px]:flex-row  min-[960px]:gap-16 min-[960px]:px-4 lg:mb-20">
-        <div className="min-[960px]:flex-1 min-[960px]:self-center">
-          <p className="text-2xl font-medium mb-5 tracking-tight md:mb-8 lg:text-5xl  lg:tracking-normal  lg:leading-snug">
+      <div className="flex gap-5 flex-col-reverse text-center mx-3 mb-8  md:flex-row  md:gap-16 min-[960px]:px-4 lg:mb-20 md:pt-8 lg:pt-0">
+        <div className="md:flex-1 lg:self-center md:pt-8 lg:pt-0 ">
+          <p className="text-3xl leading-[1.6] font-medium mb-11  md:mb-6 md:text-4xl md:leading-[1.7] lg:text-5xl lg:leading-[1.5]  ">
             The world's largest therapy service<br></br>
             <span className="text-[#3b737b] block pt-1 md:pt-0">
               100% online
@@ -23,7 +23,7 @@ function Stats() {
           </p>
         </div>
 
-        <div className="mb-6 min-[960px]:flex-1">
+        <div className="mb-7 md:flex-1 md:mb-16  lg:pt-24">
           {stats.map((stat) => (
             <div key={stat.id}>
               <h3 className="text-3xl font-semibold mb-1 tracking-tight  mt-2 text-[#0D4A07] ">

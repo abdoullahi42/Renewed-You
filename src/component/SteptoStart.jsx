@@ -8,7 +8,7 @@ import {
 
 function SteptoStart() {
   return (
-    <section className="mb-14 lg:mb-16 ">
+    <section className="mb-14 md:mb-20 ">
       <div className=" flex flex-col ">
         <div className="mx-auto text-center mb-4 lg:mb-6">
           <h3 className="font-semibold font-abdu text-2xl md:text-3xl lg:text-5xl mb-2">
@@ -22,7 +22,7 @@ function SteptoStart() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-3">
           <div className="text-center px-8 py-3 mb-3 sm:mb-0">
             <span className="mb-3 text-4xl inline-block">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <FontAwesomeIcon icon={faMagnifyingGlass} color="#0C4607" />
             </span>
             <h3 className="font-semibold font-abdu text-xl mb-3 ">
               Find Your Ideal Match
@@ -51,7 +51,7 @@ function SteptoStart() {
 
           <div className="text-center px-8 py-3 mb-3 sm:mb-0">
             <span className="mb-3 text-4xl inline-block">
-              <FontAwesomeIcon icon={faHandshake} />
+              <FontAwesomeIcon icon={faHandshake} color="#0C4607" />
             </span>
             <h3 className="font-semibold font-abdu text-xl mb-3">
               Start healing

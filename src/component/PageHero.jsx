@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/no-unescaped-entities */
 function PageHero() {
   return (
@@ -13,9 +15,11 @@ function PageHero() {
             self-discovery and growth, we offer a personalized therapy for your
             journey to thrive
           </p>
-          <button className="mb-4 bg-[#0C4607]  text-[#fff] px-8 py-4 rounded-[29px]  inline-block font-semibold leading-[1.3] lg:rounded-[36px] text-[15px] lg:text-[20px] ">
-            Get Started
-          </button>
+          <Link to="/onlineTheraphy">
+            <button className="mb-4 bg-[#0C4607]  text-[#fff] px-8 py-4 rounded-[29px]  inline-block font-semibold leading-[1.3] lg:rounded-[36px] text-[15px] lg:text-[20px] ">
+              Get Started
+            </button>
+          </Link>
         </div>
         <div className="md:px-11 lg:px-0 lg:mt-2">
           <img src="src/assets/virtualtheraphy.avif" className="rounded-lg  " />

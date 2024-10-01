@@ -48,7 +48,7 @@ const cardData = [
 
 function Reviews() {
   return (
-    <section className="my-28 py-24 bg-[#F5F5DC] h-[full]">
+    <section className=" pb-28 pt-11 bg-[#F5F5DC] ">
       <div
         className="flex overflow-x-scroll py-8 lg:ml-7"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

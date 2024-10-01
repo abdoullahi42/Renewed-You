@@ -32,8 +32,7 @@ const questions = [
   },
   {
     id: 2002,
-    question:
-      "What do we call an input element that is completely synchronised with state?",
+    question: "What do we",
     answer: "Controlled element",
   },
 ];
@@ -56,37 +55,44 @@ function Faqs() {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 lg:mx-auto  lg:w-[80%] lg:px-8 px-5">
+    <div className="bg-[#fffcf6] py-10">
+      <div>
+        <h3 className="mb-16 text-3xl md:text-4xl lg:text-[40px] font-semibold text-center">
+          Frequently Asked Questions
+        </h3>
+      </div>
+      <div className=" w-11/12 lg:w-10/12 mx-auto pb-20 ">
         {questions.map((question) => (
           <div key={question.id} className=" ">
-            <div className="border-b border-solid border-[#c3c8c1]]  mt-10 ">
+            <div className="bg-[#E8E6E1] text-whit mb-5">
               <div
                 onClick={() => handleClicks(question.id)}
-                className="flex  justify-between "
+                className={`flex justify-between items-center py-5 px-4 md:px-8 lg:px-9 transition-all duration-300 ease-in ${
+                  openQuestions.includes(question.id)
+                    ? "bg-[#004F2D] text-white "
+                    : ""
+                } ${question}`}
               >
-                <h3
-                  className={`${
-                    openQuestions.includes(question.id) ? "  pt-2 " : "pb-2"
-                  } xl:text-left`}
-                >
+                <h3 className="font-medium text-xl  md:text-2xl  w-10/12">
                   {question.question}
                 </h3>
-                <p
-                  className={`${
-                    openQuestions.includes(question.id) ? "pt-4" : ""
-                  }`}
-                >
+                <p>
                   {openQuestions.includes(question.id) ? (
-                    <FaMinus />
+                    <FaMinus size={18} />
                   ) : (
-                    <FaPlus />
+                    <FaPlus size={18} />
                   )}
                 </p>
               </div>
-              <p className="py-2 text-[#087f5b] ">
-                {openQuestions.includes(question.id) && question.answer}
-              </p>
+              <div
+                className={`${
+                  openQuestions.includes(question.id) ? "py-7 px-6" : ""
+                }`}
+              >
+                <p className="text-[18px] md:text-xl leading-[1.5] ">
+                  {openQuestions.includes(question.id) && question.answer}
+                </p>
+              </div>
             </div>
           </div>
         ))}

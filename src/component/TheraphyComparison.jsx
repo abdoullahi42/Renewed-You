@@ -16,19 +16,21 @@ const TherapyComparison = () => {
   ];
 
   return (
-    <section className="therapy-comparison p-4">
+    <section className="p-4">
       <h2 className="font-semibold font-abdu text-2xl md:text-3xl lg:text-5xl mb-5 text-center lg:mb-14 ">
-        Renewed You vs. In-Office Therapy
+        Renewed-You vs In-Office Therapy
       </h2>
-      <div className="grid-container px-6 grid grid-cols-3 gap-4 xl:px-20 xl:gap-1 justify-center">
+      <div className=" px-6 grid grid-cols-3 gap-4 xl:px-20 xl:gap-1 justify-center">
         {/* Three columns */}
         <div className=" "></div> {/* Empty first column */}
         <div className="  font-bold text-center  mb-5">Renewed You</div>
-        <div className="grid-item  font-bold text-center  mb-5">In-Office</div>
+        <div className="grid  font-bold text-center  mb-5">In-Office</div>
         {features.map((feature) => (
           <Fragment key={feature.name}>
-            <div className="grid-item">{feature.name}</div>
-            <div className="grid-item text-center">
+            <div className="grid text-[18px] md:text-xl font-medium">
+              {feature.name}
+            </div>
+            <div className="grid text-center">
               {/* Checkmark/Cross for Renewed You */}
               {feature.online ? (
                 <span className="checkmark text-green-500 text-xl rounded-xl">

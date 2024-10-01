@@ -10,6 +10,8 @@ import Couples from "./pages/couples";
 import Individual from "./pages/individual";
 import NavBar from "./component/navBar";
 import Footer from "./component/Footer";
+import Landpages from "./pages/landpages";
+import Onboarding from "./pages/onboarding";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Routes>
         <Route index element={<Homes />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/land" element={<Landpages />} />
+        <Route path="/onboarding-theraphy" element={<Onboarding />} />
 
         <Route path="/onlineTheraphy">
           <Route index element={<OnlineTheraphy />} />
