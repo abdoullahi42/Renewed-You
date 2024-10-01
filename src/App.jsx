@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 import Teens from "./pages/Teens";
 import Couples from "./pages/couples";
 import Individual from "./pages/individual";
-import NavBar from "./component/navBar";
+import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import Landpages from "./pages/landpages";
 import Onboarding from "./pages/onboarding";
