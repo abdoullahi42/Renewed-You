@@ -57,9 +57,11 @@ function NavBar() {
         >
           <ul className="flex flex-col mt-11 lg:flex-row lg:m-0 mx-auto gap-6 text-[18px] font-medium  lg:gap-8 xl:gap-10  items-center">
             {Links.map((link) => (
-              <li key={link.name} className="">
-                <a href={link.link}>{link.name}</a>
-              </li>
+              <Link to={link.link} key={link.name}>
+                <li className="">
+                  <a href={link.link}>{link.name}</a>
+                </li>
+              </Link>
             ))}
           </ul>
           <div className=" flex flex-col  lg:flex-row mx-auto lg:mx-0 gap-8  w-fit lg:w-full py-1 flex-shrink-0 pr-1 ">

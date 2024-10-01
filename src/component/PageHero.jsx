@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import img from "../assets/virtualtheraphy.avif";
 
 /* eslint-disable react/no-unescaped-entities */
 function PageHero() {
@@ -22,7 +23,7 @@ function PageHero() {
           </Link>
         </div>
         <div className="md:px-11 lg:px-0 lg:mt-2">
-          <img src="src/assets/virtualtheraphy.avif" className="rounded-lg  " />
+          <img src={img} className="rounded-lg  " alt="hero-img" />
         </div>
       </div>
     </section>
