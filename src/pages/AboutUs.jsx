@@ -1,21 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import img from "../assets/image1.jpg";
+import img1 from "../assets/image2.jpg";
+import img2 from "../assets/image3.jpg";
+import img3 from "../assets/image4.jpg";
+import img4 from "../assets/image5.jpg";
+import img5 from "../assets/image6.jpg";
+import img6 from "../assets/image7.jpg";
+import img7 from "../assets/image8.jpg";
+import img8 from "../assets/image9.jpg";
+import img9 from "../assets/image10.jpg";
+import img10 from "../assets/image11.jpg";
+import img11 from "../assets/image12.jpg";
+import img12 from "../assets/image13.jpg";
+import img13 from "../assets/image14.jpg";
+import img14 from "../assets/image15.jpg";
 const imagesData = [
-  { id: 1, url: "src/assets/image1.jpg", alt: "theraphist" },
-  { id: 2, url: "src/assets/image2.jpg", alt: "theraphist" },
-  { id: 3, url: "src/assets/image3.jpg", alt: "theraphist" },
-  { id: 4, url: "src/assets/image4.jpg", alt: "theraphist" },
-  { id: 5, url: "src/assets/image5.jpg", alt: "theraphist" },
-  { id: 6, url: "src/assets/image6.jpg", alt: "theraphist" },
-  { id: 7, url: "src/assets/image7.jpg", alt: "theraphist" },
-  { id: 8, url: "src/assets/image8.jpg", alt: "theraphist" },
-  { id: 9, url: "src/assets/image9.jpg", alt: "theraphist" },
-  { id: 10, url: "src/assets/image10.jpg", alt: "theraphist" },
-  { id: 11, url: "src/assets/image11.jpg", alt: "theraphist" },
-  { id: 12, url: "src/assets/image12.jpg", alt: "theraphist" },
-  { id: 13, url: "src/assets/image13.jpg", alt: "theraphist" },
-  { id: 14, url: "src/assets/image14.jpg", alt: "theraphist" },
-  { id: 15, url: "src/assets/image15.jpg", alt: "theraphist" },
+  { id: 1, url: img, alt: "theraphist" },
+  { id: 2, url: img1, alt: "theraphist" },
+  { id: 3, url: img2, alt: "theraphist" },
+  { id: 4, url: img3, alt: "theraphist" },
+  { id: 5, url: img4, alt: "theraphist" },
+  { id: 6, url: img5, alt: "theraphist" },
+  { id: 7, url: img6, alt: "theraphist" },
+  { id: 8, url: img7, alt: "theraphist" },
+  { id: 9, url: img8, alt: "theraphist" },
+  { id: 10, url: img9, alt: "theraphist" },
+  { id: 11, url: img10, alt: "theraphist" },
+  { id: 12, url: img11, alt: "theraphist" },
+  { id: 13, url: img12, alt: "theraphist" },
+  { id: 14, url: img13, alt: "theraphist" },
+  { id: 15, url: img14, alt: "theraphist" },
 ];
 
 function AboutUs() {
