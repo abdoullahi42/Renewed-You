@@ -1,7 +1,7 @@
 import AboutUs from "./pages/AboutUs";
 import PageNotFound from "./pages/PageNotFound";
 // import Main from "./component/Main";
-import Homes from "./pages/homes";
+import Homes from "./pages/Homes.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import OnlineTheraphy from "./pages/onlineTherapy";
 import Contact from "./pages/Contact";
