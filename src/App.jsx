@@ -10,7 +10,7 @@ import Couples from "./pages/Couples";
 import Individual from "./pages/Individual";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
-import Landpages from "./pages/landpages";
+import Landpages from "./pages/Landpages";
 import Onboarding from "./pages/Onboarding";
 
 function App() {
