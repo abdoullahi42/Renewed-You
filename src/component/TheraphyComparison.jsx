@@ -16,7 +16,7 @@ const TherapyComparison = () => {
   ];
 
   return (
-    <section className="p-4">
+    <section className="p-4 bg-[#F7CAC9] ">
       <h2 className="font-semibold font-abdu text-2xl md:text-3xl lg:text-5xl mb-5 text-center lg:mb-14 ">
         Renewed-You vs In-Office Therapy
       </h2>

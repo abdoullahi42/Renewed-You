@@ -17,8 +17,8 @@ function PageHero() {
             journey to thrive
           </p>
           <Link to="/onlineTheraphy">
-            <button className="mb-4 bg-[#0C4607]  text-[#fff] px-8 py-4 rounded-[29px]  inline-block font-semibold leading-[1.3] lg:rounded-[36px] text-[15px] lg:text-[20px] ">
-              Get Started
+            <button className="mb-4 bg-[#0C4607]  text-[#fff] px-8 lg:p-4 py-4 rounded-[29px]  inline-block font-semibold leading-[1.1] lg:rounded-[24px] text-[15px] lg:text-[18px] ">
+              Connect with a Therapist
             </button>
           </Link>
         </div>

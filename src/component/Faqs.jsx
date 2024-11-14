@@ -57,25 +57,28 @@ function Faqs() {
   return (
     <div className="bg-[#fffcf6] py-10">
       <div>
-        <h3 className="mb-16 text-3xl md:text-4xl lg:text-[40px] font-semibold text-center">
+        <h3 className="mb-16 text-3xl md:text-4xl lg:text-[40px] font-semibold text-center text-[#2D2A2A]">
           Frequently Asked Questions
         </h3>
       </div>
       <div className=" w-11/12 lg:w-10/12 mx-auto pb-20 ">
         {questions.map((question) => (
           <div key={question.id} className=" ">
-            <div className="bg-[#E8E6E1] text-whit mb-5">
+            <div className="mb-3 border-[#9E9C9C] border-t-2">
               <div
                 onClick={() => handleClicks(question.id)}
                 className={`flex justify-between items-center py-5 px-4 md:px-8 lg:px-9 transition-all duration-300 ease-in ${
-                  openQuestions.includes(question.id)
-                    ? "bg-[#004F2D] text-white "
-                    : ""
+                  openQuestions.includes(question.id) ? "" : ""
                 } ${question}`}
               >
-                <h3 className="font-medium text-xl  md:text-2xl  w-10/12">
+                <h3
+                  className={`font-medium text-xl  md:text-2xl  w-10/12 ${
+                    openQuestions.includes(question.id) ? "" : ""
+                  }`}
+                >
                   {question.question}
                 </h3>
+
                 <p>
                   {openQuestions.includes(question.id) ? (
                     <FaMinus size={18} />
@@ -84,6 +87,9 @@ function Faqs() {
                   )}
                 </p>
               </div>
+              {openQuestions.includes(question.id) && (
+                <div className="border-b-2 border-[#9E9C9C]"></div>
+              )}
               <div
                 className={`${
                   openQuestions.includes(question.id) ? "py-7 px-6" : ""
