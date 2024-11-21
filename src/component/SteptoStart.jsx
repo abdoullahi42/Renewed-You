@@ -15,7 +15,7 @@ function SteptoStart() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-4 lg:w-10/12 lg:mx-auto ">
           <div className="text-center px-4 py-3 mb-3 sm:mb-0 border border-[#9E9C9C] rounded-md">
             <span className="mb-5 text-4xl inline-block">
               <FaMagnifyingGlass color="#543CA3" />

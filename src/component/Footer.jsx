@@ -80,14 +80,14 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex  py-8 gap-11 justify-center">
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
-          <p>Sharing Settings</p>
-          <p>Web Accessibility</p>
-          <p className="flex items-center gap-1">
+        <div className=" grid grid-cols-2 justify-between px-5 gap-2 lg:flex  py-8 lg:gap-11 lg:justify-center lg:pt-10">
+          <p className="mb-5 lg:mb-0">Terms & Conditions</p>
+          <p className="mb-5 lg:mb-0">Privacy Policy</p>
+          <p className="mb-5 lg:mb-0">Sharing Settings</p>
+          <p className="mb-5 lg:mb-0">Web Accessibility</p>
+          <p className="flex items-center gap-1 text-nowrap self-center">
             {" "}
-            <TbCircleLetterC /> 2024 Renewed You
+            <TbCircleLetterC size={18} /> 2024 Renewed You
           </p>
         </div>
       </div>

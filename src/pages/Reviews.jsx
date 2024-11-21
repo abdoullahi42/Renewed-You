@@ -1,10 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
+import { useState, useEffect } from "react";
 import hijabwoman from "../assets/HijabiWoman.jpg";
 import couples from "../assets/happycouples.png";
 import couple from "../assets/coupless.jpg";
 import man from "../assets/justin.jpg";
-import boy from "../assets/amad.jpg";
-import womans from "../assets/ally.jpg";
+
+import { BsCircle, BsCircleFill } from "react-icons/bs";
 
 const cardData = [
   {
@@ -12,70 +12,88 @@ const cardData = [
     image: man,
     title: "David",
     quote:
-      "I was hesitant about therapy, but Renewed-You made the process approachable and supportive. My therapist listened without judgment and helped me uncover solutions I hadn't considered. I'm so glad I took the leap",
+      "I was hesitant about therapy, but Renewed-You made the process approachable and supportive. My therapist listened without judgment and helped me uncover solutions I hadn't considered. I'm so glad I took the leap.",
   },
-  // {
-  //   id: 2,
-  //   image: womans,
-  //   title: "sofia",
-  //   quote:
-  //     "Therapy at Renewed-You wasn't just helpful, it was transformative. My therapist provided a safe space to explore my anxieties and develop coping mechanisms. I feel empowered and ready to tackle life's challenges.",
-  // },
-  // {
-  //   id: 3,
-  //   image: couples,
-  //   title: "Emily and John",
-  //   quote:
-  //     "Renewed-You therapy saved our relationship. We found a renewed sense of love and understanding in our relationship. Now, we feel closer and more connected than ever",
-  // },
-  // {
-  //   id: 4,
-  //   image: hijabwoman,
-  //   title: "Fatima",
-  //   quote:
-  //     "Struggling with burnout was taking a toll on my work and personal life. Therapy at Renewed-You helped me identify the root causes and develop strategies for better work-life balance. it helped me rediscover my inner strength and find clarity in my life.",
-  // },
-  // {
-  //   id: 5,
-  //   image: boy,
-  //   title: "lamine",
-  //   quote:
-  //     "Talking to a therapist at Renewed-You was a game-changer. Renewed-You gave me the tools to handle school stress and friendships without judgment. I feel confident now to communicate my needs openly.",
-  // },
-  // {
-  //   id: 6,
-  //   image: couple,
-  //   title: "Sarah and Michael",
-  //   quote:
-  //     "Going to therapy at Renewed-You was the best decision we made. We learned how to celebrate each other's strengths and navigate disagreements constructively. It's brought a new level of intimacy to our relationship",
-  // },
+  {
+    id: 2,
+    image: hijabwoman,
+    title: "Fatima",
+    quote:
+      "Struggling with burnout was taking a toll on my work and personal life. Therapy at Renewed-You helped me identify the root causes and develop strategies for better work-life balance. It helped me rediscover my inner strength and find clarity in my life.",
+  },
+  {
+    id: 3,
+    image: couples,
+    title: "Emily and John",
+    quote:
+      "Renewed-You therapy saved our relationship. We found a renewed sense of love and understanding in our relationship. Now, we feel closer and more connected than ever.",
+  },
+  {
+    id: 4,
+    image: couple,
+    title: "Sarah and Michael",
+    quote:
+      "Going to therapy at Renewed-You was the best decision we made. We learned how to celebrate each other's strengths and navigate disagreements constructively. It's brought a new level of intimacy to our relationship.",
+  },
 ];
 
 function Reviews() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to handle manual slide change
+  const handleGoToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Automatically change the slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === cardData.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className=" pb-28 pt-11 bg-[#F7CAC9] ">
-      <div className="lg:w-10/12 mx-auto lg:flex justify-center px-11">
-        <div className="flex justify-center w-11/12 ">
-          <p className="lg:text-5xl text-[#4B3F72]">”</p>
-          {cardData.map((card) => (
-            <div className="grid grid-cols-1 " key={card.id}>
-              <p className="px-10 pt-10 mb-5 text-center text-[#2D2A2A]">
-                {card.quote}
+    <section className="pb-16 pt-11 bg-[#F5F5DC]">
+      <div className="md:w-10/12 mx-auto md:flex justify-center px-11">
+        <div className="flex justify-center md:w-3/4 lg:w-2/3 ">
+          <p className=" text-4xl lg:text-6xl text-[#4B3F72]">”</p>
+          <div className="grid">
+            {/* Display the current slide based on currentIndex */}
+            <p className="pt-10 mb-5 lg:text-center text-[#2D2A2A]">
+              {cardData[currentIndex].quote}
+            </p>
+            <div className="flex gap-3 justify-center">
+              <img
+                src={cardData[currentIndex].image}
+                alt={cardData[currentIndex].title}
+                className="h-32 w-32 rounded-[50%]"
+              />
+              <p className="mt-4 text-xl font-semibold text-center text-[#2D2A2A] text-nowrap">
+                {cardData[currentIndex].title}
               </p>
-              <div className="flex gap-3 justify-center">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-44 rounded-full"
-                />
-                <p className="mt-4 text-xl font-semibold text-center text-[#2D2A2A]">
-                  {card.title}
-                </p>
-              </div>
             </div>
-          ))}
-          <p style={{ fontSize: "53px" }}>”</p>
+          </div>
+          <p className=" text-4xl lg:text-6xl text-[#4B3F72] ">”</p>
         </div>
+      </div>
+      {/* Circle Indicators */}
+      <div className="flex justify-center py-6 gap-3">
+        {cardData.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => handleGoToSlide(index)}
+            className="cursor-pointer"
+          >
+            {index === currentIndex ? (
+              <BsCircleFill size={16} color="#4B3F72" />
+            ) : (
+              <BsCircle size={16} color="#4B3F72" />
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
