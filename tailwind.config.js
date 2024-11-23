@@ -6,6 +6,7 @@ export default {
   theme: {
     fontFamily: {
       abdu: "Poppins",
+      albert: "Albert Sans",
     },
     extend: {},
   },

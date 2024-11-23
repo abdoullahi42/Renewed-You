@@ -1,88 +1,179 @@
 /* eslint-disable react/no-unescaped-entities */
-import img from "../assets/image1.jpg";
-import img1 from "../assets/image2.jpg";
-import img2 from "../assets/image3.jpg";
-import img3 from "../assets/image4.jpg";
-import img4 from "../assets/image5.jpg";
-import img5 from "../assets/image6.jpg";
-import img6 from "../assets/image7.jpg";
-import img7 from "../assets/image8.jpg";
-import img8 from "../assets/image9.jpg";
-import img9 from "../assets/image10.jpg";
-import img10 from "../assets/image11.jpg";
-import img11 from "../assets/image12.jpg";
-import img12 from "../assets/image13.jpg";
-import img13 from "../assets/image14.jpg";
-import img14 from "../assets/image15.jpg";
-const imagesData = [
-  { id: 1, url: img, alt: "theraphist" },
-  { id: 2, url: img1, alt: "theraphist" },
-  { id: 3, url: img2, alt: "theraphist" },
-  { id: 4, url: img3, alt: "theraphist" },
-  { id: 5, url: img4, alt: "theraphist" },
-  { id: 6, url: img5, alt: "theraphist" },
-  { id: 7, url: img6, alt: "theraphist" },
-  { id: 8, url: img7, alt: "theraphist" },
-  { id: 9, url: img8, alt: "theraphist" },
-  { id: 10, url: img9, alt: "theraphist" },
-  { id: 11, url: img10, alt: "theraphist" },
-  { id: 12, url: img11, alt: "theraphist" },
-  { id: 13, url: img12, alt: "theraphist" },
-  { id: 14, url: img13, alt: "theraphist" },
-  { id: 15, url: img14, alt: "theraphist" },
+import { FaChevronRight, FaLinkedinIn } from "react-icons/fa6";
+import CEO from "../assets/CEO.png";
+import Manager from "../assets/Manager.png";
+import img from "../assets/img.png";
+import img1 from "../assets/img2.png";
+
+const Data = [
+  {
+    id: 1,
+    tittle: "Our Mission",
+    description:
+      "We make quality mental health care an integral part of people’s lives. We believe it has to be easily accessible and cost-efficient.",
+    icon: "",
+  },
+  {
+    id: 2,
+    tittle: "Our Vision",
+    description:
+      "We dream of a world where everyone, everywhere, can tailor support to their unique journey toward wellness.",
+    icon: "",
+  },
+  {
+    id: 3,
+    tittle: "Our Values",
+    description:
+      "Empathy. Quality without compromise. Personalization and individual approach. Inclusivity and diversity. Innovation that enriches therapy experience.",
+    icon: "",
+  },
 ];
 
 function AboutUs() {
   return (
-    <>
-      <section className="my-14">
-        <div className="text-center mb-5 lg:mb-7">
-          <h2 className="text-4xl  mb-3  lg:mb-12 ">About us</h2>
-          <div className=" mb-9  flex flex-col p-5 lg:items-center md:mb-12 ">
-            <h3 className="text-2xl font-semibold mb-5 md:mb-8 px-2 lg:text-4xl">
-              {/*/ Guiding Teens, Couples, and Individuals on Their Path to Well-being/*/}
-              Wellbeing for Teens, Couples & Individuals
-            </h3>
-            <p className=" text-center  lg:mx-auto lg:w-[77%] lg:text-[18px] lg:px-5">
-              Renewed You breaks down barriers to therapy, making mental health
-              care accessible and affordable for everyone in a convenient online
-              format. Our passionate therapists empower individuals, couples,
-              and teens to overcome challenges and achieve their goals through
-              personalized therapy plans.
-            </p>
-          </div>
+    <section className="my-14">
+      <div className="text-center mb-5 lg:mb-7">
+        <h2 className="text-4xl  mb-3  lg:mb-12 ">About us</h2>
+        <div className=" mb-9  flex flex-col p-5 lg:items-center md:mb-12 ">
+          <h3 className="text-2xl font-semibold mb-5 md:mb-8 px-2 lg:text-4xl">
+            {/*/ Guiding Teens, Couples, and Individuals on Their Path to Well-being/*/}
+            Wellbeing for Teens, Couples & Individuals
+          </h3>
+          <p className=" text-center  lg:mx-auto lg:w-[77%] lg:text-[18px] lg:px-5">
+            Renewed You breaks down barriers to therapy, making mental health
+            care accessible and affordable for everyone in a convenient online
+            format. Our passionate therapists empower individuals, couples, and
+            teens to overcome challenges and achieve their goals through
+            personalized therapy plans.
+          </p>
+        </div>
 
-          <div className="text-center mx-auto flex flex-col items-center justify-center mb-11 md:mb-16 lg:mb-20">
-            <div className="mx-5">
-              <h3 className="text-2xl md:text-3xl mb-12 md:mb-16 lg:mb-[60px] font-medium">
-                Our therapists
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-4 lg:w-10/12 lg:mx-auto mb-12 ">
+          {Data.map((values) => (
+            <div
+              key={values.id}
+              className="text-center px-4 py-3 mb-3 sm:mb-0  rounded-md"
+              style={{ boxShadow: "0px 0px 4px 0px #00000040" }}
+            >
+              <span className="mb-5 text-4xl inline-block">{values.icon}</span>
+              <h3 className="font-semibold font-abdu text-xl mb-5 ">
+                {values.tittle}
               </h3>
+              <p className="">{values.description}</p>
             </div>
-            <div className="text-center px-9 mx-7 grid grid-cols-4  gap-6 min-[929px]:grid-cols-5 min-[929px]:gap-8">
-              {imagesData.map((image) => (
-                // Wrap each image in its own div
-                <div key={image.id} className="mb-3">
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="rounded-[55%] w-[150px]"
-                  />
-                </div>
-              ))}
+          ))}
+        </div>
+        <div className="mb-10">
+          <button className="rounded-[60px]  py-2 px-4 mb-8 text-18px bg-[#B5EAD7]">
+            Start theraphy now
+          </button>
+        </div>
+        <div className="font-albert">
+          <h4 className="text-[#2D2A2A]  text-2xl md:text-3xl lg:text-[40px] font-medium text-center mb-5 ">
+            Our service
+          </h4>
+          <p className="text-center font-normal  lg:text-2xl mb-16">
+            Online therapy, counseling, and coaching for everyone - regardless
+            of background or identity.
+          </p>
+          <div className=" lg:flex gap-6 w-11/12 mx-auto text-white mb-20 ">
+            <div
+              className="bg-cover bg-center w-full  rounded-[20px] py-10 px-4 text-start bg-blend-multiply"
+              style={{
+                backgroundImage: `url(${img})`,
+                backgroundColor: "#3C3A3A66",
+              }}
+            >
+              <h3 className="text-2xl md:text-[32px] font-medium mb-24">
+                For individuals
+              </h3>
+              <p className=" md:text-[22px] mb-12">
+                Flexible and accessible mental health care options. One-hour
+                matching. Secure therapy space. Self-help toolbox for
+                comprehensive support.
+              </p>
+              <h6 className="md:text-[25px] font-medium mb-3 ">Text Therapy</h6>
+              <p className="md:text-[22px] font-medium mb-4">
+                Unlimited text messaging on your phone or laptop. It’s perfect
+                for expressing those hard-to-say things at your pace.
+              </p>
+              <div className="flex items-center gap-2 mb-10 ">
+                <span className="md:text-[18px] ">learn more</span>
+                <FaChevronRight size={12} />
+              </div>
+              <h6 className="md:text-[25px] font-medium mb-3 ">
+                Video Therapy
+              </h6>
+              <p className="md:text-[22px] font-medium mb-6">
+                Face-to-face, from your space. Live video therapy sessions feel
+                more personal than text-based online therapy. Multiple studies
+                found they have the same effect as in-person sessions.
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="md:text-[18px] ">learn more</span>
+                <FaChevronRight size={12} />
+              </div>
             </div>
-          </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold mb-11  lg:mb-12  px-4 md:px-2 lg:text-4xl lg:leading-snug text-center md:w-[80%] mx-auto ">
-              Ready to take the first step towards a happier and healthier you?
-            </h2>
-            <button className="text-xl  lg:text-2xl py-3 px-6 bg-[#0D4A07] text-[#fff] rounded-[30px]">
-              Get started
-            </button>
+            <div
+              className="bg-cover bg-center rounded-[20px] text-start py-10 px-4 bg-blend-multiply"
+              style={{
+                backgroundImage: `url(${img1})`,
+                backgroundColor: "#3C3A3A66",
+              }}
+            >
+              <h3 className="text 2xl md:text-[32px] font-medium mb-24">
+                For businesses
+              </h3>
+              <p className="md:text-[22px] font-medium mb-10">
+                We empower teams with mental health support for a healthier,
+                more productive work environment
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="md:text-[18px] self-center ">learn more</span>
+                <FaChevronRight size={12} />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </>
+        <div>
+          <h3 className="lg:text-[40px] font-medium mb-5">
+            Our leadership team
+          </h3>
+          <div className="md:flex lg:w-3/4 mx-auto gap-10 py-6 font-albert">
+            <div className="">
+              <img src={CEO} alt="CEO" className="rounded-[20px] mb-4" />
+              <p className="md:text-3xl font-medium mb-3 flex justify-between ">
+                Leslie Alexander{" "}
+                <span>
+                  <FaLinkedinIn />
+                </span>
+              </p>
+              <p className="md:text-2xl font-normal lg:text-nowrap flex">
+                Founder and CEO at Renewed-You
+              </p>
+            </div>
+
+            <div>
+              <img
+                src={Manager}
+                alt="Manager"
+                className="rounded-[20px] mb-4"
+              />
+              <p className="md:text-3xl font-medium mb-3 flex justify-between ">
+                Dianne Russell
+                <span>
+                  <FaLinkedinIn />
+                </span>
+              </p>
+              <p className="md:text-2xl font-normal lg:text-nowrap flex">
+                Partnerships Manager at Renewed-You
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
