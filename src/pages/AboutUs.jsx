@@ -35,11 +35,11 @@ function AboutUs() {
       <div className="text-center mb-5 lg:mb-7">
         <h2 className="text-4xl  mb-3  lg:mb-12 ">About us</h2>
         <div className=" mb-9  flex flex-col p-5 lg:items-center md:mb-12 ">
-          <h3 className="text-2xl font-semibold mb-5 md:mb-8 px-2 lg:text-4xl">
+          <h3 className="text-2xl font-semibold mb-5 md:mb-8 px-2  md:text-3xl lg:text-4xl">
             {/*/ Guiding Teens, Couples, and Individuals on Their Path to Well-being/*/}
             Wellbeing for Teens, Couples & Individuals
           </h3>
-          <p className=" text-center  lg:mx-auto lg:w-[77%] lg:text-[18px] lg:px-5">
+          <p className=" text-center  lg:mx-auto lg:w-[77%] md:text-[18px] lg:px-5">
             Renewed You breaks down barriers to therapy, making mental health
             care accessible and affordable for everyone in a convenient online
             format. Our passionate therapists empower individuals, couples, and
@@ -59,26 +59,26 @@ function AboutUs() {
               <h3 className="font-semibold font-abdu text-xl mb-5 ">
                 {values.tittle}
               </h3>
-              <p className="">{values.description}</p>
+              <p className="md:text-[18px]">{values.description}</p>
             </div>
           ))}
         </div>
         <div className="mb-10">
-          <button className="rounded-[60px]  py-2 px-4 mb-8 text-18px bg-[#B5EAD7]">
+          <button className="rounded-[60px]  py-3 px-6 mb-8 text-2xl bg-[#B5EAD7]">
             Start theraphy now
           </button>
         </div>
         <div className="font-albert">
-          <h4 className="text-[#2D2A2A]  text-2xl md:text-3xl lg:text-[40px] font-medium text-center mb-5 ">
+          <h4 className="text-[#2D2A2A]  text-3xl md:text-4xl  lg:text-[40px] font-medium text-center mb-5 ">
             Our service
           </h4>
-          <p className="text-center font-normal  lg:text-2xl mb-16">
+          <p className="text-center font-normal  text-2xl   md:text-3xl mb-16 xl:text-2xl">
             Online therapy, counseling, and coaching for everyone - regardless
             of background or identity.
           </p>
-          <div className=" lg:flex gap-6 w-11/12 mx-auto text-white mb-20 ">
+          <div className=" lg:flex gap-6 w-11/12 mx-auto text-white mb-20 py-6">
             <div
-              className="bg-cover bg-center w-full  rounded-[20px] py-10 px-4 text-start bg-blend-multiply"
+              className="bg-cover bg-center w-full  rounded-[20px] py-10 px-4 text-start bg-blend-multiply mb-8"
               style={{
                 backgroundImage: `url(${img})`,
                 backgroundColor: "#3C3A3A66",
@@ -116,13 +116,13 @@ function AboutUs() {
             </div>
 
             <div
-              className="bg-cover bg-center rounded-[20px] text-start py-10 px-4 bg-blend-multiply"
+              className="bg-cover bg-center rounded-[20px] text-start py-10 px-4 bg-blend-multiply mb-8"
               style={{
                 backgroundImage: `url(${img1})`,
                 backgroundColor: "#3C3A3A66",
               }}
             >
-              <h3 className="text 2xl md:text-[32px] font-medium mb-24">
+              <h3 className="text-2xl md:text-[32px] font-medium mb-24">
                 For businesses
               </h3>
               <p className="md:text-[22px] font-medium mb-10">
@@ -137,19 +137,19 @@ function AboutUs() {
           </div>
         </div>
         <div>
-          <h3 className="lg:text-[40px] font-medium mb-5">
+          <h3 className=" text-3xl lg:text-[40px] font-medium mb-5">
             Our leadership team
           </h3>
-          <div className="md:flex lg:w-3/4 mx-auto gap-10 py-6 font-albert">
-            <div className="">
+          <div className="md:flex lg:w-3/4 mx-auto gap-10 py-6 font-albert px-6">
+            <div className="mb-8">
               <img src={CEO} alt="CEO" className="rounded-[20px] mb-4" />
-              <p className="md:text-3xl font-medium mb-3 flex justify-between ">
+              <p className=" text-2xl md:text-3xl font-medium mb-1 md:mb-3 flex justify-between ">
                 Leslie Alexander{" "}
                 <span>
                   <FaLinkedinIn />
                 </span>
               </p>
-              <p className="md:text-2xl font-normal lg:text-nowrap flex">
+              <p className=" text-[22px] md:text-2xl font-normal lg:text-nowrap flex">
                 Founder and CEO at Renewed-You
               </p>
             </div>
@@ -160,13 +160,13 @@ function AboutUs() {
                 alt="Manager"
                 className="rounded-[20px] mb-4"
               />
-              <p className="md:text-3xl font-medium mb-3 flex justify-between ">
+              <p className=" text-2xl md:text-3xl font-medium mb-1 md:mb-3 flex justify-between ">
                 Dianne Russell
                 <span>
                   <FaLinkedinIn />
                 </span>
               </p>
-              <p className="md:text-2xl font-normal lg:text-nowrap flex">
+              <p className=" text-[22px] md:text-2xl font-normal lg:text-nowrap flex">
                 Partnerships Manager at Renewed-You
               </p>
             </div>

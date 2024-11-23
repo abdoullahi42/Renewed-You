@@ -22,7 +22,7 @@ function Footer() {
     <footer className="bg-[#343A3A] py-12 text-white">
       <div>
         <div className=" grid grid-cols-1 gap-9 md:grid-cols-2  lg:grid-cols-4 w-11/12 mx-auto lg:gap-9 px-5 pb-9 border-b border-white">
-          <div className="w-full  ">
+          <div className="w-full mb-7  ">
             <h3 className=" flex items-center gap-2 text-xl md:text-2xl  mb-8 ">
               {" "}
               <span>
