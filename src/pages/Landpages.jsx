@@ -27,7 +27,7 @@ const Landpages = () => {
   ];
 
   const ChatView = () => (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col max-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -50,7 +50,7 @@ const Landpages = () => {
       </div>
 
       {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-9 mb-8">
         {/* Welcome Message */}
         <div className="bg-white rounded-lg p-4 shadow-sm max-w-[80%]">
           <p className="text-gray-800">
@@ -96,7 +96,7 @@ const Landpages = () => {
         {chatHistory.map((chat) => (
           <div
             key={chat.id}
-            className="bg-white rounded-lg p-4 shadow-sm cursor-pointer hover:bg-gray-50"
+            className="bg-white rounded-lg p-3 shadow-sm cursor-pointer hover:bg-gray-50"
             onClick={() => setView("chat")}
           >
             <div className="flex justify-between items-start">
@@ -105,12 +105,12 @@ const Landpages = () => {
                 <p className="text-sm text-gray-500 mt-1">{chat.preview}</p>
               </div>
               <div className="flex flex-col items-end gap-2">
-                <span className="text-xs text-gray-500">{chat.date}</span>
                 {chat.unread && (
                   <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
                     New
                   </span>
                 )}
+                <span className="text-xs text-gray-500">{chat.date}</span>
               </div>
             </div>
           </div>
