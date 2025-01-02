@@ -25,7 +25,11 @@ function NavBar() {
   }, []);
   return (
     <nav
-      className={`bg-white ${isScrolled ? "bg-white sticky top-0 z-50 " : ""}`}
+      className={` ${
+        isScrolled
+          ? " sticky top-0 z-50 bg-[#B5EAD7]"
+          : "bg-gradient-to-r from-[#B5EAD7]   to-[#F5F5DC] "
+      }`}
     >
       <div
         className={`flex justify-between  lg:gap-0 lg:justify-start  px-4 lg:pl-4 lg:pr-24  py-10 lg:pb-0 lg:pt-5 items-center ${

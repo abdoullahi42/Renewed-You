@@ -4,6 +4,10 @@ import CEO from "../assets/CEO.png";
 import Manager from "../assets/Manager.png";
 import img from "../assets/img.png";
 import img1 from "../assets/img2.png";
+import Client from "../component/LastQuestionnair";
+import { GiBullseye } from "react-icons/gi";
+import { AiOutlineEye } from "react-icons/ai";
+import { FaHandHoldingDroplet } from "react-icons/fa6";
 
 const Data = [
   {
@@ -11,21 +15,21 @@ const Data = [
     tittle: "Our Mission",
     description:
       "We make quality mental health care an integral part of people’s lives. We believe it has to be easily accessible and cost-efficient.",
-    icon: "",
+    icon: <GiBullseye color="#543CA3" />,
   },
   {
     id: 2,
     tittle: "Our Vision",
     description:
       "We dream of a world where everyone, everywhere, can tailor support to their unique journey toward wellness.",
-    icon: "",
+    icon: <AiOutlineEye color="#543CA3" />,
   },
   {
     id: 3,
     tittle: "Our Values",
     description:
       "Empathy. Quality without compromise. Personalization and individual approach. Inclusivity and diversity. Innovation that enriches therapy experience.",
-    icon: "",
+    icon: <FaHandHoldingDroplet color="#543CA3" />,
   },
 ];
 
@@ -52,10 +56,10 @@ function AboutUs() {
           {Data.map((values) => (
             <div
               key={values.id}
-              className="text-center px-4 py-3 mb-3 sm:mb-0  rounded-md"
+              className="text-center px-4 py-4 mb-3 sm:mb-0  rounded-md"
               style={{ boxShadow: "0px 0px 4px 0px #00000040" }}
             >
-              <span className="mb-5 text-4xl inline-block">{values.icon}</span>
+              <span className="mb-4 text-4xl inline-block">{values.icon}</span>
               <h3 className="font-semibold font-abdu text-xl mb-5 ">
                 {values.tittle}
               </h3>
@@ -64,7 +68,7 @@ function AboutUs() {
           ))}
         </div>
         <div className="mb-10">
-          <button className="rounded-[60px]  py-3 px-6 mb-8 text-2xl bg-[#B5EAD7]">
+          <button className="rounded-[60px]  py-3 px-6 mb-8 text-2xl bg-[#4B3F72] text-white">
             Start theraphy now
           </button>
         </div>
@@ -173,6 +177,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <Client />
     </section>
   );
 }

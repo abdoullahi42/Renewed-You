@@ -36,7 +36,7 @@ const styles = {
 };
 function Contact() {
   return (
-    <section className="bg-[#fffcf6]">
+    <section className="bg-[#fffcf6] pb-16">
       <div className="w-full py-16 pb-8">
         <div>
           <h3 className="text-4xl mb-3 lg:mb-8 text-center">Contact US</h3>
