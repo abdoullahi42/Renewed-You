@@ -3,14 +3,14 @@ import PageNotFound from "./pages/PageNotFound";
 // import Main from "./component/Main";
 import Homes from "./pages/Homes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import OnlineTheraphy from "./pages/OnlineTherapy";
+// import OnlineTheraphy from "./pages/OnlineTherapy";
 import Contact from "./pages/Contact";
 import Teens from "./pages/Teens";
 import Couples from "./pages/Couples";
 import Individual from "./pages/Individual";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
-import Landpages from "./pages/Landpages";
+import Landpages from "./pages/landpages";
 import Onboarding from "./pages/Onboarding";
 import ClientQuestionnair1 from "./component/ClientQuestionnair1";
 

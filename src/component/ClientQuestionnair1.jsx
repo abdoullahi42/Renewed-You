@@ -46,6 +46,11 @@ const questions = [
 
 function ClientQuestionnair1() {
   const [countries, setCountries] = useState([]);
+  const [step, setStep] = useState(0);
+  function handleClick() {
+    setStep((Previous) => Previous + 1);
+  }
+  const [currentIndex, setcurrentIndex] = useState(0);
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -69,7 +74,7 @@ function ClientQuestionnair1() {
       >
         {questions.map((val, i) => (
           <div key={i} className=" w-11/12 mx-auto py-4">
-            <h5 className="text-center text-xl mb-4">{val.quest}</h5>
+            <h5 className="text-center text-xl mb-8">{val.quest}</h5>
 
             {val.options &&
               val.options.map((option, index) => (
@@ -77,31 +82,42 @@ function ClientQuestionnair1() {
                   key={index}
                   className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
                 >
-                  <button className=" text-white py-3 px-5 ">{option}</button>
+                  <button className=" text-white py-3 px-5 " onClick="">
+                    {option}
+                  </button>
                 </div>
               ))}
-
-            {val.isInput && val.IsInputType === "DropDown" && (
-              <select>
-                {val.inputOptions.map((opt, i) => (
-                  <option key={i} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
-            )}
-            {val.isInput && val.IsInputType === "Api" && (
-              <Fragment>
-                <select>
-                  {countries.map((country, i) => (
-                    <option key={i} value={country}>
-                      {country}
+            <div className=" w-10/12 mx-auto">
+              {val.isInput && val.IsInputType === "DropDown" && (
+                <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D]">
+                  {val.inputOptions.map((opt, i) => (
+                    <option key={i} value={opt}>
+                      {opt}
                     </option>
                   ))}
                 </select>
-                <div>
-                  <button>previous</button>
-                  <button>Next</button>
+              )}
+            </div>
+
+            {val.isInput && val.IsInputType === "Api" && (
+              <Fragment>
+                <div className=" w-10/12 mx-auto">
+                  <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D] mb-5">
+                    {countries.map((country, i) => (
+                      <option key={i} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="flex  w-10/12 mx-auto justify-between mt-5 ">
+                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px]">
+                    Previous
+                  </button>
+                  <button className="bg-[#4B3F72] text-white  w-1/4  py-2 px-4 rounded-[80px]">
+                    Next
+                  </button>
                 </div>
               </Fragment>
             )}
