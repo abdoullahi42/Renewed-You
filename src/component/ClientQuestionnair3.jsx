@@ -39,41 +39,52 @@ const questions = [
     isOneQuesiton: true,
   },
 ];
+const optionsStyle =
+  "text-white py-3 px-5 block  bg-[#716599] mb-2  rounded-[80px]  w-10/12";
 
 function ClientQuestionnair3() {
   return (
-    <section>
-      <div>
+    <section className="lg:w-10/12 mx-auto my-8">
+      <div
+        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
+      >
         {questions.map((question) => (
-          <div key={question.quest}>
+          <div key={question.quest} className=" w-11/12 mx-auto py-4">
             {question.isOneQuesiton ? (
               <div>
-                <h5>{question.quest}</h5>
-                <div>
-                  <button>Yes</button>
-                  <button>No</button>
+                <h5 className="text-center text-xl mb-8">{question.quest}</h5>
+                <div className="mb-4 w-10/12 mx-auto">
+                  <button className={optionsStyle}>Yes</button>
+                  <button className={optionsStyle}>No</button>
                 </div>
               </div>
             ) : (
               <div>
-                <p>
+                <p className="text-center text-[18px] mb-12">
                   Over the past 2 weeks, how often have you been bothered by any
                   of the following problems:
                 </p>
-                <h5>{question.quest}</h5>
+                <h5 className="text-center text-xl mb-8">{question.quest}</h5>
                 {question.hasDifferentOptions ? (
-                  <div>
-                    <button>Not difficult at all</button>
-                    <button>Somewhat difficult</button>
-                    <button>Very difficult</button>
-                    <button>Extremely difficult</button>
+                  <div className="mb-4 w-10/12 mx-auto">
+                    <button className={optionsStyle}>
+                      Not difficult at all
+                    </button>
+                    <button className={optionsStyle}>Somewhat difficult</button>
+                    <button className={optionsStyle}>Very difficult</button>
+                    <button className={optionsStyle}>
+                      Extremely difficult
+                    </button>
                   </div>
                 ) : (
-                  <div>
-                    <button>Not at all</button>
-                    <button>Several days</button>
-                    <button>More than half the days</button>
-                    <button>Nearly every day</button>
+                  <div className="mb-4   w-10/12 mx-auto">
+                    <button className={optionsStyle}>Not at all</button>
+                    <button className={optionsStyle}>Several days</button>
+                    <button className={optionsStyle}>
+                      More than half the days
+                    </button>
+                    <button className={optionsStyle}>Nearly every day</button>
                   </div>
                 )}
               </div>

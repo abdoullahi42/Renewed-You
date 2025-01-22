@@ -1,4 +1,4 @@
-import { FaExclamationCircle } from "react-icons/fa";
+import { FaExclamation } from "react-icons/fa";
 const questions = [
   {
     quest: "What is your relationship status?",
@@ -86,32 +86,44 @@ const questions = [
 
 function ClientQuestionnair2() {
   return (
-    <section>
-      <div>
+    <section className="lg:w-10/12 mx-auto my-8">
+      <div
+        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
+      >
         {questions.map((value, index) => (
-          <div key={index}>
-            <h5>{value.quest}</h5>
+          <div key={index} className=" w-11/12 mx-auto py-4">
+            <h5 className="text-center text-xl mb-8">{value.quest}</h5>
 
             {value.option &&
               value.option.map((option, index) => (
-                <div key={index}>
-                  <button>{option}</button>
+                <div
+                  key={index}
+                  className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
+                >
+                  <button className=" text-white py-3 px-5 ">{option}</button>
                 </div>
               ))}
 
             {value.inputType === "checkbox" && (
-              <div>
+              <div className=" w-10/12 mx-auto">
                 {value.checkboxOption.map((option, index) => (
-                  <div key={index} className="flex gap-3">
+                  <div key={index} className="flex gap-3 mb-1">
                     <input type="checkbox" />
                     <p>{option}</p>
                   </div>
                 ))}
 
-                <button>Next</button>
-                <div className="flex items-center">
-                  <FaExclamationCircle />
-                  <p>
+                <div className=" flex justify-end">
+                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px] ">
+                    Next
+                  </button>
+                </div>
+                <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto ">
+                  <div className="flex items-center border border-[#5336A7] p-[1px] rounded-full w-7">
+                    <div className="text-[#5336A7] w-12 text-center">!</div>
+                  </div>
+                  <p className="text-sm">
                     This is a preliminary question to understand what you are
                     going through, you will have more opportunities to explain
                     or elaborate on your feelings and challenges later on.
@@ -121,14 +133,18 @@ function ClientQuestionnair2() {
             )}
 
             {value.inputType === "box" && (
-              <div>
+              <div className=" w-10/12 mx-auto">
                 {value.checkboxOption.map((option, index) => (
-                  <div key={index} className="flex gap-3">
+                  <div key={index} className="flex gap-3 mb-1">
                     <input type="checkbox" />
                     <p>{option}</p>
                   </div>
                 ))}
-                <button>Next</button>
+                <div className=" flex justify-end">
+                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px] ">
+                    Next
+                  </button>
+                </div>
               </div>
             )}
           </div>

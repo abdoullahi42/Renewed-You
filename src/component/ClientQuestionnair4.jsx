@@ -1,4 +1,4 @@
-import { FaExclamationCircle } from "react-icons/fa";
+import { FaExclamation } from "react-icons/fa";
 const questions = [
   {
     quest: "Do you have any problems or worries about intimacy?",
@@ -33,12 +33,9 @@ const questions = [
   },
   {
     quest: "How would you rate your current financial status?",
-  },
-  {
-    quest:
-      "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
     options: ["Good", "Fair", "poor"],
   },
+
   {
     quest: "How would you rate your current sleeping habits?",
     options: ["Good", "Fair", "poor"],
@@ -144,24 +141,32 @@ const questions = [
 
 function ClientQuestionnair4() {
   return (
-    <section>
-      <div>
+    <section className="lg:w-10/12 mx-auto my-8">
+      <div
+        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
+      >
         {questions.map((value, index) => (
-          <div key={index}>
-            <h5>{value.quest}</h5>
+          <div key={index} className=" w-11/12 mx-auto py-4">
+            <h5 className="text-center text-xl mb-8">{value.quest}</h5>
 
             {value.options && (
               <div>
                 {value.options.map((option, index) => (
-                  <div key={index}>
-                    <button>{option}</button>
+                  <div
+                    key={index}
+                    className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
+                  >
+                    <button className=" text-white py-3 px-5 ">{option}</button>
                   </div>
                 ))}
 
                 {value.isCaution && (
-                  <div>
-                    <FaExclamationCircle />
-                    <p>
+                  <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto">
+                    <div className="flex items-center border border-[#5336A7] p-1 rounded-full max-h-fit">
+                      <FaExclamation size={15} color="#5336A7" />
+                    </div>
+                    <p className="text-sm">
                       Some symptoms of panic attacks including a racing heart,
                       dizziness, or chest pains.
                     </p>
@@ -171,16 +176,20 @@ function ClientQuestionnair4() {
             )}
 
             {value.checkboxOption && (
-              <div>
+              <div className=" w-11/12 mx-auto">
                 {value.checkboxOption.map((option, index) => (
-                  <div key={index}>
-                    <div className="flex gap-3">
+                  <div key={index} className=" w-10/12 mx-auto">
+                    <div className="flex gap-3 mb-1">
                       <input type="checkbox" />
                       <p>{option}</p>
                     </div>
                   </div>
                 ))}
-                <button>Next</button>
+                <div className=" flex justify-end">
+                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px] ">
+                    Next
+                  </button>
+                </div>
               </div>
             )}
           </div>

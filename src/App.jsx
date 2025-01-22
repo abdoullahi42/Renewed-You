@@ -12,7 +12,7 @@ import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import Landpages from "./pages/landpages";
 import Onboarding from "./pages/Onboarding";
-import ClientQuestionnair1 from "./component/ClientQuestionnair1";
+import ClientQuestionnair2 from "./component/LastQuestionnair";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="/onboarding-theraphy" element={<Onboarding />} />
 
         <Route path="/onlineTheraphy">
-          <Route index element={<ClientQuestionnair1 />} />
+          <Route index element={<ClientQuestionnair2 />} />
           <Route path="teens" element={<Teens />} />
           <Route path="couples" element={<Couples />} />
           <Route path="individuals" element={<Individual />} />

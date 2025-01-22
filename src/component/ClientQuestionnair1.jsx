@@ -46,11 +46,19 @@ const questions = [
 
 function ClientQuestionnair1() {
   const [countries, setCountries] = useState([]);
-  const [step, setStep] = useState(0);
-  function handleClick() {
-    setStep((Previous) => Previous + 1);
-  }
-  const [currentIndex, setcurrentIndex] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0);
+  const handleNext = () => {
+    if (currentStep < questions.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -72,65 +80,77 @@ function ClientQuestionnair1() {
         className="h-fit py-4 w-3/5 mx-auto rounded-lg"
         style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
       >
-        {questions.map((val, i) => (
-          <div key={i} className=" w-11/12 mx-auto py-4">
-            <h5 className="text-center text-xl mb-8">{val.quest}</h5>
+        {questions[currentStep] && (
+          <div className=" w-11/12 mx-auto py-4">
+            <h5 className="text-center text-xl mb-8">
+              {questions[currentStep].quest}
+            </h5>
 
-            {val.options &&
-              val.options.map((option, index) => (
+            {questions[currentStep].options &&
+              questions[currentStep].options.map((option, index) => (
                 <div
                   key={index}
                   className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
+                  onClick={handleNext}
                 >
-                  <button className=" text-white py-3 px-5 " onClick="">
-                    {option}
-                  </button>
+                  <button className=" text-white py-3 px-5 ">{option}</button>
                 </div>
               ))}
             <div className=" w-10/12 mx-auto">
-              {val.isInput && val.IsInputType === "DropDown" && (
-                <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D]">
-                  {val.inputOptions.map((opt, i) => (
-                    <option key={i} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-
-            {val.isInput && val.IsInputType === "Api" && (
-              <Fragment>
-                <div className=" w-10/12 mx-auto">
-                  <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D] mb-5">
-                    {countries.map((country, i) => (
-                      <option key={i} value={country}>
-                        {country}
+              {questions[currentStep].isInput &&
+                questions[currentStep].IsInputType === "DropDown" && (
+                  <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D]">
+                    {questions[currentStep].inputOptions.map((opt, i) => (
+                      <option key={i} value={opt} onChange={handleNext}>
+                        {opt}
                       </option>
                     ))}
                   </select>
-                </div>
+                )}
+            </div>
 
-                <div className="flex  w-10/12 mx-auto justify-between mt-5 ">
-                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px]">
-                    Previous
-                  </button>
-                  <button className="bg-[#4B3F72] text-white  w-1/4  py-2 px-4 rounded-[80px]">
-                    Next
-                  </button>
-                </div>
-              </Fragment>
-            )}
-            {val.isCaution && (
+            {questions[currentStep].isInput &&
+              questions[currentStep].IsInputType === "Api" && (
+                <Fragment>
+                  <div className=" w-10/12 mx-auto">
+                    <select
+                      className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D] mb-5"
+                      onChange={handleNext}
+                    >
+                      {countries.map((country, i) => (
+                        <option key={i} value={country}>
+                          {country}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="flex  w-10/12 mx-auto justify-between mt-5 ">
+                    <button
+                      className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px]"
+                      onClick={handlePrevious}
+                    >
+                      Previous
+                    </button>
+                    <button
+                      className="bg-[#4B3F72] text-white  w-1/4  py-2 px-4 rounded-[80px]"
+                      onClick={handleNext}
+                    >
+                      Next
+                    </button>
+                  </div>
+                </Fragment>
+              )}
+            {questions[currentStep].isCaution && (
               <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto">
                 <div className="flex items-center border border-[#5336A7] p-1 rounded-full max-h-fit">
                   <FaExclamation size={15} color="#5336A7" />
                 </div>
-                <p className="text-sm">{val.caution}</p>
+                <p className="text-sm">{questions[currentStep].caution}</p>
               </div>
             )}
           </div>
-        ))}
+        )}
       </div>
     </section>
   );
