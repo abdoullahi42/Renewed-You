@@ -4,7 +4,7 @@ import CEO from "../assets/CEO.png";
 import Manager from "../assets/Manager.png";
 import img from "../assets/img.png";
 import img1 from "../assets/img2.png";
-import Client from "../component/LastQuestionnair";
+import Client from "../component/ClientQuestionnair3";
 import { GiBullseye } from "react-icons/gi";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaHandHoldingDroplet } from "react-icons/fa6";

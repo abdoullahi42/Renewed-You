@@ -46,8 +46,11 @@ const questions = [
 
 function ClientQuestionnair1() {
   const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedAge, setSelectedAge] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
   const handleNext = () => {
+    
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     }
@@ -64,7 +67,7 @@ function ClientQuestionnair1() {
       try {
         const response = await fetch("https://restcountries.com/v3.1/all");
         const data = await response.json();
-        const countryNames = data.map((country) => country.name.common);
+        const countryNames = data.map((country) => country.name.common).sort();
         setCountries(countryNames);
         console.log(countryNames);
       } catch (error) {
@@ -99,9 +102,13 @@ function ClientQuestionnair1() {
             <div className=" w-10/12 mx-auto">
               {questions[currentStep].isInput &&
                 questions[currentStep].IsInputType === "DropDown" && (
-                  <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D]">
+                  <select className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D]"  value={selectedAge}
+                  onChange={(e) => {
+                    setSelectedAge(e.target.value);
+                    handleNext();
+                  }}>
                     {questions[currentStep].inputOptions.map((opt, i) => (
-                      <option key={i} value={opt} onChange={handleNext}>
+                      <option key={i} value={opt}>
                         {opt}
                       </option>
                     ))}
@@ -115,7 +122,9 @@ function ClientQuestionnair1() {
                   <div className=" w-10/12 mx-auto">
                     <select
                       className="w-11/12 mx-auto rounded-[5px] p-2 border border-[#3E3D3D] mb-5"
-                      onChange={handleNext}
+                    
+                      value={selectedCountry}
+                      onChange={(e) => setSelectedCountry(e.target.value)}
                     >
                       {countries.map((country, i) => (
                         <option key={i} value={country}>

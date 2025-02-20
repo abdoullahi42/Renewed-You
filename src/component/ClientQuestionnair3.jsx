@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 const questions = [
   {
     quest:
@@ -43,18 +45,25 @@ const optionsStyle =
   "text-white py-3 px-5 block  bg-[#716599] mb-2  rounded-[80px]  w-10/12";
 
 function ClientQuestionnair3() {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const handleNext = () => {
+    if (currentStep < questions.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  }
   return (
     <section className="lg:w-10/12 mx-auto my-8">
       <div
         className="h-fit py-4 w-3/5 mx-auto rounded-lg"
         style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
       >
-        {questions.map((question) => (
-          <div key={question.quest} className=" w-11/12 mx-auto py-4">
-            {question.isOneQuesiton ? (
+        {questions[currentStep] && (
+          <div  className=" w-11/12 mx-auto py-4">
+            {questions[currentStep].isOneQuesiton ? (
               <div>
-                <h5 className="text-center text-xl mb-8">{question.quest}</h5>
-                <div className="mb-4 w-10/12 mx-auto">
+                <h5 className="text-center text-xl mb-8">{questions[currentStep].quest}</h5>
+                <div className="mb-4 w-10/12 mx-auto" onClick={handleNext}>
                   <button className={optionsStyle}>Yes</button>
                   <button className={optionsStyle}>No</button>
                 </div>
@@ -65,9 +74,9 @@ function ClientQuestionnair3() {
                   Over the past 2 weeks, how often have you been bothered by any
                   of the following problems:
                 </p>
-                <h5 className="text-center text-xl mb-8">{question.quest}</h5>
-                {question.hasDifferentOptions ? (
-                  <div className="mb-4 w-10/12 mx-auto">
+                <h5 className="text-center text-xl mb-8">{questions[currentStep].quest}</h5>
+                {questions[currentStep].hasDifferentOptions ? (
+                  <div className="mb-4 w-10/12 mx-auto" onClick={handleNext}>
                     <button className={optionsStyle}>
                       Not difficult at all
                     </button>
@@ -78,7 +87,7 @@ function ClientQuestionnair3() {
                     </button>
                   </div>
                 ) : (
-                  <div className="mb-4   w-10/12 mx-auto">
+                  <div className="mb-4   w-10/12 mx-auto" onClick={handleNext}>
                     <button className={optionsStyle}>Not at all</button>
                     <button className={optionsStyle}>Several days</button>
                     <button className={optionsStyle}>
@@ -90,7 +99,7 @@ function ClientQuestionnair3() {
               </div>
             )}
           </div>
-        ))}
+        )}
       </div>
     </section>
   );
