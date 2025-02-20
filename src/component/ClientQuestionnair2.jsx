@@ -85,13 +85,15 @@ const questions = [
   },
 ];
 
-function ClientQuestionnair2() {
+function ClientQuestionnair2({ onNext }) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const handleNext = () => {
     
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
+    }else {
+      onNext();
     }
   };
   const handlePrevious = () => {
@@ -114,10 +116,10 @@ function ClientQuestionnair2() {
               questions[currentStep].option.map((option, index) => (
                 <div
                   key={index}
-                  className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
+                  className="mb-4 bg-[#70E1B9]  rounded-[80px] w-10/12 mx-auto"
                   onClick={handleNext}
                 >
-                  <button className=" text-white py-3 px-5 ">{option}</button>
+                  <button className="  text-[#222020] py-3 px-5 ">{option}</button>
                 </div>
               ))}
 
@@ -131,11 +133,11 @@ function ClientQuestionnair2() {
                 ))}
 
                 <div className=" flex justify-end" onClick={handleNext}>
-                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px] ">
+                  <button className="bg-[#70E1B9] text-[#222020] w-1/4  py-2 px-4 rounded-[80px] ">
                     Next
                   </button>
                 </div>
-                <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto ">
+                <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#CFEDE2] w-10/12 mx-auto ">
                   <div className="flex items-center border border-[#5336A7] p-[1px] rounded-full w-7">
                     <div className="text-[#5336A7] w-12 text-center"> <FaExclamation color="#5336A7"/> </div>
                   </div>
@@ -157,7 +159,7 @@ function ClientQuestionnair2() {
                   </div>
                 ))}
                 <div className=" flex justify-end" onClick={handleNext}>
-                  <button className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px] ">
+                  <button className="bg-[#70E1B9] text-[#222020]  w-1/4  py-2 px-4 rounded-[80px] ">
                     Next
                   </button>
                 </div>

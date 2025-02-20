@@ -42,14 +42,16 @@ const questions = [
   },
 ];
 const optionsStyle =
-  "text-white py-3 px-5 block  bg-[#716599] mb-2  rounded-[80px]  w-10/12";
+  " bg-[#70E1B9] text-[#222020] py-3 px-5 block   mb-2  rounded-[80px]  w-10/12";
 
-function ClientQuestionnair3() {
+function ClientQuestionnair3({onNext}) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const handleNext = () => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
+    } else {
+      onNext();
     }
   }
   return (

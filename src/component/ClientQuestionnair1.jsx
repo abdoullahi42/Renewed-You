@@ -44,7 +44,7 @@ const questions = [
   },
 ];
 
-function ClientQuestionnair1() {
+function ClientQuestionnair1({onNext}) {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedAge, setSelectedAge] = useState("");
@@ -53,6 +53,8 @@ function ClientQuestionnair1() {
     
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
+    }else {
+      onNext();
     }
   };
 
@@ -93,10 +95,10 @@ function ClientQuestionnair1() {
               questions[currentStep].options.map((option, index) => (
                 <div
                   key={index}
-                  className="mb-4 bg-[#716599] rounded-[80px] w-10/12 mx-auto"
+                  className="mb-4 bg-[#70E1B9]  rounded-[80px] w-10/12 mx-auto"
                   onClick={handleNext}
                 >
-                  <button className=" text-white py-3 px-5 ">{option}</button>
+                  <button className=" text-[#222020] py-3 px-5 ">{option}</button>
                 </div>
               ))}
             <div className=" w-10/12 mx-auto">
@@ -136,13 +138,13 @@ function ClientQuestionnair1() {
 
                   <div className="flex  w-10/12 mx-auto justify-between mt-5 ">
                     <button
-                      className="bg-[#4B3F72] text-white w-1/4  py-2 px-4 rounded-[80px]"
+                      className="bg-[#70E1B9] text-[#222020] w-1/4  py-2 px-4 rounded-[80px]"
                       onClick={handlePrevious}
                     >
                       Previous
                     </button>
                     <button
-                      className="bg-[#4B3F72] text-white  w-1/4  py-2 px-4 rounded-[80px]"
+                      className="bg-[#70E1B9]  text-[#222020]  w-1/4  py-2 px-4 rounded-[80px]"
                       onClick={handleNext}
                     >
                       Next
@@ -151,7 +153,7 @@ function ClientQuestionnair1() {
                 </Fragment>
               )}
             {questions[currentStep].isCaution && (
-              <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto">
+              <div className="flex items-center mt-14 gap-6 py-3 px-4 bg-[#CFEDE2] w-10/12 mx-auto">
                 <div className="flex items-center border border-[#5336A7] p-1 rounded-full max-h-fit">
                   <FaExclamation size={15} color="#5336A7" />
                 </div>

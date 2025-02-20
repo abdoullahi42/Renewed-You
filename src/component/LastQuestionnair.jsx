@@ -64,12 +64,14 @@ const dataCheckBox = [
   },
 ];
 
-function LastQuestionnair() {
+function LastQuestionnair({onNext}) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const handleNext = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
+    }else {
+      onNext();
     }
   };
 
@@ -112,7 +114,7 @@ function LastQuestionnair() {
                 I agree to the terms and conditions and privacy policy
               </p>
             </div>
-            <div className="w-3/4 bg-[#4B3F72] py-2 px-4 text-white rounded-[50px] text-center mx-auto" onClick={handleNext}>
+            <div className="w-3/4 bg-[#70E1B9] text-[#222020] py-2 px-4 rounded-[50px] text-center mx-auto" onClick={handleNext}>
               <button>Continue</button>
             </div>
           </div>
@@ -129,7 +131,7 @@ function LastQuestionnair() {
               <div className="text-center w-10/12 mx-auto">
                 <textarea className="border border-[#4B3F72] rounded-xl resize-none outline-none w-1/3 mx-12 placeholder:text-center mb-8" />
               </div>
-              <div className="bg-[#4B3F72] text-white py-2 px-4 text-center rounded-full mb-8" onClick={handleNext}>
+              <div className="bg-[#70E1B9] text-[#222020] py-2 px-4 text-center rounded-full mb-8" onClick={handleNext}>
                 <button>Submit</button>
               </div>
               <div className="border border-black py-2 px-4 text-center rounded-full mb-8">
@@ -148,7 +150,7 @@ function LastQuestionnair() {
               <h5 className="text-xl lg:text-2xl text-center my-4">
                 {dataCheckBox[currentStep - 2].title}
               </h5>
-              <div className="flex items-center mt-4 gap-6 py-3 px-4 bg-[#DEDBE9] w-10/12 mx-auto mb-12">
+              <div className="flex items-center mt-4 gap-6 py-3 px-4 bg-[#CFEDE2] w-10/12 mx-auto mb-12">
                 <div className="flex items-center border border-[#5336A7] p-1 rounded-full max-h-fit">
                   <FaExclamation size={15} color="#5336A7" />
                 </div>
@@ -162,7 +164,7 @@ function LastQuestionnair() {
                   </div>
                 ))}
               </div>
-              <div className="flex text-right border border-red-500 justify-end">
+              <div className="flex text-right  justify-end">
                 <button className="bg-[#4BDBA7] text-white py-2 px-4 text-right rounded-[50px]" onClick={handleNext}>
                   Next
                 </button>
