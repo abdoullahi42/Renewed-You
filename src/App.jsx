@@ -10,7 +10,7 @@ import Couples from "./pages/Couples";
 import Individual from "./pages/Individual";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
-import Landpages from "./pages/landpages";
+
 import Onboarding from "./pages/Onboarding";
 import Onlinetheraphy from "./pages/QuestionnaireManager"
 
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route index element={<Homes />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/land" element={<Landpages />} />
+        
         <Route path="/onboarding-theraphy" element={<Onboarding />} />
 
         <Route path="/onlineTheraphy">
