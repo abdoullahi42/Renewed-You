@@ -18,9 +18,9 @@ function SteptoStart() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-4 lg:w-10/12 lg:mx-auto ">
           <div className="text-center px-4 py-3 mb-3 sm:mb-0 border border-[#9E9C9C] rounded-md">
             <span className="mb-5 text-4xl inline-block">
-              <FaMagnifyingGlass color="#543CA3" />
+              <FaMagnifyingGlass color="#0E4833" />
             </span>
-            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#543CA3]">
+            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#0E4833]">
               Find Your Ideal Match
             </h3>
             <p className=" font-abdu font-normal ">
@@ -33,9 +33,9 @@ function SteptoStart() {
 
           <div className="text-center px-4 py-3 mb-3 sm:mb-0 border border-[#9E9C9C] rounded-md ">
             <span className="mb-5 text-4xl inline-block ">
-              <FaCalendar color="#543CA3" />
+              <FaCalendar color="#0E4833" />
             </span>
-            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#543CA3]">
+            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#0E4833]">
               Shedule Appointment
             </h3>
             <p className="font-normal font-abdu">
@@ -47,9 +47,9 @@ function SteptoStart() {
 
           <div className="text-center px-4 py-3 mb-3 sm:mb-0 border border-[#9E9C9C] rounded-md">
             <span className="mb-5 text-4xl inline-block">
-              <FaHandshake color="#543CA3" />
+              <FaHandshake color="#0E4833" />
             </span>
-            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#543CA3]">
+            <h3 className="font-semibold font-abdu text-xl mb-5 text-[#0E4833]">
               Start healing
             </h3>
             <p className="font-normal font-abdu">

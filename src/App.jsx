@@ -10,6 +10,7 @@ import Couples from "./pages/Couples";
 import Individual from "./pages/Individual";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
+import Login from "./pages/Login";
 
 import Onboarding from "./pages/Onboarding";
 import Onlinetheraphy from "./pages/QuestionnaireManager"
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>

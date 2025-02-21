@@ -4,7 +4,7 @@ import CEO from "../assets/CEO.png";
 import Manager from "../assets/Manager.png";
 import img from "../assets/img.png";
 import img1 from "../assets/img2.png";
-import Client from "../component/ClientQuestionnair1";
+
 import { GiBullseye } from "react-icons/gi";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaHandHoldingDroplet } from "react-icons/fa6";
@@ -15,21 +15,21 @@ const Data = [
     tittle: "Our Mission",
     description:
       "We make quality mental health care an integral part of people’s lives. We believe it has to be easily accessible and cost-efficient.",
-    icon: <GiBullseye color="#543CA3" />,
+    icon: <GiBullseye color="#0E4833" />,
   },
   {
     id: 2,
     tittle: "Our Vision",
     description:
       "We dream of a world where everyone, everywhere, can tailor support to their unique journey toward wellness.",
-    icon: <AiOutlineEye color="#543CA3" />,
+    icon: <AiOutlineEye color="#0E4833" />,
   },
   {
     id: 3,
     tittle: "Our Values",
     description:
       "Empathy. Quality without compromise. Personalization and individual approach. Inclusivity and diversity. Innovation that enriches therapy experience.",
-    icon: <FaHandHoldingDroplet color="#543CA3" />,
+    icon: <FaHandHoldingDroplet color="#0E4833" />,
   },
 ];
 
@@ -68,7 +68,7 @@ function AboutUs() {
           ))}
         </div>
         <div className="mb-10">
-          <button className="rounded-[60px]  py-3 px-6 mb-8 text-2xl bg-[#4B3F72] text-white">
+          <button className="rounded-[60px]  py-3 px-6 mb-8 text-2xl bg-[#0E4833] text-white">
             Start theraphy now
           </button>
         </div>
@@ -177,7 +177,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <Client />
+   
     </section>
   );
 }

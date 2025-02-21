@@ -67,9 +67,11 @@ function NavBar() {
             ))}
           </ul>
           <div className=" flex flex-col  lg:flex-row mx-auto lg:mx-0 gap-8  w-fit lg:w-full py-1 flex-shrink-0 pr-1 ">
+            <Link to="/login"> 
             <button className="border border-[#0C4607] rounded-[28px] p-[10px] py-[5px] ">
               Login
             </button>
+            </Link>
             <Link to="/onboarding-theraphy">
               <button className="bg-[#0C4607] text-white rounded-lg px-2 py-1">
                 Become a Therapy
