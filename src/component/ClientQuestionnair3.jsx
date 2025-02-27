@@ -42,7 +42,7 @@ const questions = [
   },
 ];
 const optionsStyle =
-  " bg-[#70E1B9] text-[#222020] py-3 px-5 block   mb-2  rounded-[80px]  w-10/12";
+  " bg-[#70E1B9] text-[#222020] py-3 px-5 block   mb-2  rounded-[80px]  w-11/12 lg:w-10/12";
 
 function ClientQuestionnair3({onNext}) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -57,7 +57,7 @@ function ClientQuestionnair3({onNext}) {
   return (
     <section className="lg:w-10/12 mx-auto my-8">
       <div
-        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        className="h-fit py-4 w-10/12 lg:w-3/5 mx-auto rounded-lg"
         style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
       >
         {questions[currentStep] && (

@@ -105,7 +105,7 @@ function ClientQuestionnair2({ onNext }) {
   return (
     <section className="lg:w-10/12 mx-auto my-8">
       <div
-        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        className="h-fit py-4 w-10/12 lg:w-3/5 mx-auto rounded-lg"
         style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
       >
         {questions[currentStep] && (
@@ -133,7 +133,7 @@ function ClientQuestionnair2({ onNext }) {
                 ))}
 
                 <div className=" flex justify-end" onClick={handleNext}>
-                  <button className="bg-[#70E1B9] text-[#222020] w-1/4  py-2 px-4 rounded-[80px] ">
+                  <button className="bg-[#70E1B9] text-[#222020] w-1/3 lg:w-1/4  py-2 px-4 rounded-[80px] ">
                     Next
                   </button>
                 </div>
@@ -159,7 +159,7 @@ function ClientQuestionnair2({ onNext }) {
                   </div>
                 ))}
                 <div className=" flex justify-end" onClick={handleNext}>
-                  <button className="bg-[#70E1B9] text-[#222020]  w-1/4  py-2 px-4 rounded-[80px] ">
+                  <button className="bg-[#70E1B9] text-[#222020]  w-1/3 lg:w-1/4  py-2 px-4 rounded-[80px] ">
                     Next
                   </button>
                 </div>

@@ -154,7 +154,7 @@ function ClientQuestionnair4({onNext}) {
   return (
     <section className="lg:w-10/12 mx-auto my-8">
       <div
-        className="h-fit py-4 w-3/5 mx-auto rounded-lg"
+        className="h-fit py-4 w-10/12 lg:w-3/5 mx-auto rounded-lg"
         style={{ boxShadow: "-2px -2px 4px 0px #00000040" }}
       >
         {questions[currentStep] && (
@@ -166,7 +166,7 @@ function ClientQuestionnair4({onNext}) {
                 {questions[currentStep].options.map((option, index) => (
                   <div
                     key={index}
-                    className="mb-4 bg-[#70E1B9]  rounded-[80px] w-10/12 mx-auto"
+                    className="mb-4 bg-[#70E1B9]  rounded-[80px] w-11/12 lg:w-10/12 mx-auto"
                     onClick={handleNext}
                   >
                     <button className="  text-[#222020] py-3 px-5 ">{option}</button>
