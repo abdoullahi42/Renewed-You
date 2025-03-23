@@ -145,7 +145,7 @@ function AboutUs() {
             Our leadership team
           </h3>
           <div className="md:flex lg:w-3/4 mx-auto gap-10 py-6 font-albert px-6">
-            <div className="mb-8">
+            <div className="mb-16">
               <img src={CEO} alt="CEO" className="rounded-[20px] mb-4" />
               <p className=" text-2xl md:text-3xl font-medium mb-1 md:mb-3 flex justify-between ">
                 Leslie Alexander{" "}

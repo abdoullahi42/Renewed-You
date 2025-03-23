@@ -59,7 +59,7 @@ function Reviews() {
     <section className="pb-16 pt-11 bg-[#F5F5DC]">
       <div className="md:w-10/12 mx-auto md:flex justify-center px-11">
         <div className="flex justify-center md:w-3/4 lg:w-2/3 ">
-          <p className=" text-4xl lg:text-6xl text-[#4B3F72]">”</p>
+          <p className=" text-4xl lg:text-6xl text-[#4BDBA7]">”</p>
           <div className="grid">
             {/* Display the current slide based on currentIndex */}
             <p className="pt-10 mb-5 lg:text-center text-[#2D2A2A]">
@@ -76,7 +76,7 @@ function Reviews() {
               </p>
             </div>
           </div>
-          <p className=" text-4xl lg:text-6xl text-[#4B3F72] ">”</p>
+          <p className=" text-4xl lg:text-6xl text-[#4BDBA7] ">”</p>
         </div>
       </div>
       {/* Circle Indicators */}
@@ -88,9 +88,9 @@ function Reviews() {
             className="cursor-pointer"
           >
             {index === currentIndex ? (
-              <BsCircleFill size={16} color="#4B3F72" />
+              <BsCircleFill size={16} color="#417B67" />
             ) : (
-              <BsCircle size={16} color="#4B3F72" />
+              <BsCircle size={16} color="#417B67" />
             )}
           </div>
         ))}

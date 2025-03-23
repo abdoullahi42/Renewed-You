@@ -15,10 +15,10 @@ const buttons = [
   },
 ];
 
-function Specialization() {
+function Specialization({handleNext}) {
   return (
     <div>
-      <div className="grid grid-cols-1 ">
+      <div className="grid grid-cols-1 " onClick={handleNext}>
         {buttons.map((btn) => (
           <button
             className="bg-[#8df382] text-black  mb-4 lg:w-2/4 xl:w-2/5 mx-auto p-3 rounded-[45px] hover:bg-[#0C4607] hover:text-white"

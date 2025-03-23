@@ -87,7 +87,7 @@ function LastQuestionnair({onNext}) {
               <input
                 type="text"
                 placeholder="First name (or nickname)"
-                className="border border-[#717070] rounded-md placeholder-[#787474] p-2  w-[95%] w-11/12 block mb-3"
+                className="border border-[#717070] rounded-md placeholder-[#787474] p-2  w-[95%] w11/12 block mb-3"
               />
               <small className="text-[#827F7F] text-sm mb-6 inline-block">
                 For added privacy you can provide a nickname instead of your first name

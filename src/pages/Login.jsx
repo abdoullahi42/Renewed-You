@@ -1,8 +1,10 @@
 import img1 from "../assets/bgLogin.png";
+import Reviews from "./Reviews"
 
 
 function Login (){
     return (
+        <section>
         <div className="pt-12 pb-28 px-0 lg:px-10  bg-cover bg-center  lg:h-[40vh] xl:h-[80vh]"  style={{
             backgroundImage: `url(${img1})`,
             backgroundColor: "#28282866",
@@ -27,6 +29,8 @@ function Login (){
 </div>
             </div>
             </div>
+            <Reviews/>
+            </section>
 
     )
 }
