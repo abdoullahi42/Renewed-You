@@ -3,7 +3,8 @@ import Specialization from "../component/Specialization";
 import PersonalInfo from "../component/PersonalInfo";
 import ProfessionalInfo from "../component/ProfessionalInfo";
 import AdditionalInfo from "../component/WorkAvailability";
-import UploadDocs from "../component/UploadDocs";
+import CreateAccount from "../component/CreateAccount";
+
 
 function Onboarding() {
   const [step, setStep] = useState(0); // Start from 0 for array indexing
@@ -14,7 +15,7 @@ function Onboarding() {
     PersonalInfo,
     ProfessionalInfo,
     AdditionalInfo,
-    UploadDocs,
+    CreateAccount,
   ];
 
   const CurrentStepComponent = steps[step];
