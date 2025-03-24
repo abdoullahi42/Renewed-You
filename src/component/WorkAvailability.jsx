@@ -110,7 +110,7 @@ function WorkAvailability() {
   };
 
   return (
-    <div className="space-y-6 p-6 max-w-2xl mx-auto bg-white rounded-lg shadow-md">
+    <div className="space-y-6 p-6 max-w-2xl mx-auto ">
       {/* Heading */}
       <h2 className="text-2xl font-semibold text-center mb-4 text-gray-800">Work & Availability</h2>
 

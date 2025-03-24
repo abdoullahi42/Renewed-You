@@ -6,7 +6,7 @@ function CreateAccount() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="max-w-lg mx-auto mt-10 p-6 ">
+    <div className="max-w-xl mx-auto mt-10 p-6 ">
       <h2 className="text-2xl font-bold text-gray-800">Create your account</h2>
       <p className="text-gray-600 mt-2">
         Thank you for your interest, aa! Please create your therapist account so we can start processing your application.
