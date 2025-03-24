@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaSeedling } from "react-icons/fa";
+import { FaBars,  FaSeedling , } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 let Links = [
@@ -52,12 +53,12 @@ function NavBar() {
         <div
           className={`${
             isopen
-              ? "fixed inset-0 bg-white h-[100vh] flex flex-col w-[90vw]  py-24 pt-5"
+              ? "fixed inset-0 bg-white h-[97vh] flex flex-col w-[94vw]  py-24 pt-5"
               : "hidden"
-          }  lg:flex  gap-8 lg:gap-20 lg:py-2     `}
+          }  lg:flex  gap-12 lg:gap-20 lg:py-2     `}
           onClick={() => setIsopen(false)}
         >
-          <ul className="flex flex-col mt-11 lg:flex-row lg:m-0 mx-auto gap-6 text-[18px] font-medium  lg:gap-8 xl:gap-10  items-center">
+          <ul className="flex flex-col mt-11 lg:flex-row lg:m-0 mx-auto gap-6 text-[18px] font-medium  lg:gap-8 xl:gap-10  lg:items-center">
             {Links.map((link) => (
               <Link to={link.link} key={link.name}>
                 <li className="">
@@ -66,14 +67,14 @@ function NavBar() {
               </Link>
             ))}
           </ul>
-          <div className=" flex flex-col  lg:flex-row mx-auto lg:mx-0 gap-8  w-fit lg:w-full py-1 flex-shrink-0 pr-1 ">
+          <div className=" flex flex-col  lg:flex-row mx-auto lg:mx-0 gap-7  w3/4 lg:w-full py-1 flex-shrink-0 pr-1 text-center lg:text-start">
             <Link to="/login"> 
-            <button className="border border-[#0C4607] rounded-[28px] p-[10px] py-[5px] ">
+            <button className="border border-[#0C4607] rounded-[28px] p-6 lg:p-2 py-1 lg: flex-1">
               Login
             </button>
             </Link>
             <Link to="/onboarding-theraphy">
-              <button className="bg-[#0C4607] text-white rounded-lg px-2 py-1">
+              <button className="bg-[#0C4607] text-white text-[18px] lg:rounded-lg px-4 py-2 rounded-[28px] ">
                 Become a Therapy
               </button>
             </Link>
@@ -81,11 +82,13 @@ function NavBar() {
         </div>
         <div onClick={() => setIsopen(!isopen)} className="">
           {isopen ? (
-            <FaTimes
+            
+            <FaXmark
               size={32}
               color=""
-              className="lg:hidden absolute top-0 right-[8%]"
+              className="lg:hidden absolute top-8 right-[8%]"
             />
+            
           ) : (
             <FaBars size={30} className="lg:hidden" />
           )}

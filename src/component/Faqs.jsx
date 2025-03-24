@@ -4,38 +4,39 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-const questions = [
+const questions = [ 
   {
     id: 3457,
-    question: "What language is React based on?",
-    answer: "JavaScript",
+    question: "Who are the therapists on Renewed-You?",
+    answer: "All therapists on Renewed-You are licensed and qualified professionals specializing in individual, teen, and couples therapy.",
   },
   {
     id: 7336,
-    question: "What are the building blocks of React apps?",
-    answer: "Components",
+    question: "How does online therapy work?",
+    answer: "Online therapy allows you to connect with a licensed therapist through secure video, phone, or chat sessions at your convenience.",
   },
   {
     id: 8832,
-    question: "What's the name of the syntax we use to describe a UI in React?",
-    answer: "JSX",
+    question: "Can I choose my therapist?",
+    answer: "Yes, you can browse through our list of therapists and select the one that best fits your needs and preferences.",
   },
   {
     id: 1297,
-    question: "How to pass data from parent to child components?",
-    answer: "Props",
+    question: "What types of therapy do you offer?",
+    answer: "We offer therapy for individuals, teens, and couples, covering areas such as anxiety, depression, relationships, and personal growth.",
   },
   {
     id: 9103,
-    question: "How to give components memory?",
-    answer: "useState hook",
+    question: "How do I schedule a session?",
+    answer: "You can book a session based on your availability or the therapist’s schedule through our easy-to-use platform.",
   },
   {
     id: 2002,
-    question: "What do we",
-    answer: "Controlled element",
+    question: "Is online therapy effective?",
+    answer: "Yes, studies have shown that online therapy is just as effective as in-person therapy for many mental health concerns.",
   },
 ];
+
 
 function Faqs() {
   // const [selectId, setSelectId] = useState(null);
